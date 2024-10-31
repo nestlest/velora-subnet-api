@@ -1,0 +1,8 @@
+django-constance[database]
+django-cors-headers
+django-environ
+django-extensions
+django-probes
+django-debug-toolbar
+djangorestframework
+psycopg2
