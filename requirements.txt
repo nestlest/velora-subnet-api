@@ -6,3 +6,5 @@ django-probes
 django-debug-toolbar
 djangorestframework
 psycopg2
+python-dateutil
+pool-data-fetcher

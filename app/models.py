@@ -80,6 +80,7 @@ class AuthUserUserPermissions(models.Model):
 class BurnEvent(models.Model):
     transaction_hash = models.CharField()
     pool_address = models.CharField()
+    block_number = models.IntegerField()
     owner = models.CharField()
     tick_lower = models.IntegerField()
     tick_upper = models.IntegerField()
@@ -95,6 +96,7 @@ class BurnEvent(models.Model):
 class CollectEvent(models.Model):
     transaction_hash = models.CharField()
     pool_address = models.CharField()
+    block_number = models.IntegerField()
     owner = models.CharField()
     recipient = models.CharField()
     tick_lower = models.IntegerField()
@@ -155,6 +157,7 @@ class DjangoSession(models.Model):
 class MintEvent(models.Model):
     transaction_hash = models.CharField()
     pool_address = models.CharField()
+    block_number = models.IntegerField()
     sender = models.CharField()
     owner = models.CharField()
     tick_lower = models.IntegerField()
@@ -181,6 +184,7 @@ class PoolData(models.Model):
 class SwapEvent(models.Model):
     transaction_hash = models.CharField()
     pool_address = models.CharField()
+    block_number = models.IntegerField()
     sender = models.CharField()
     to = models.CharField()
     amount0 = models.CharField()
