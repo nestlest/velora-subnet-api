@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+      },
+      {
+        "src": "velora/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "velora/wsgi.py" }
+    ]
+  }
+  
