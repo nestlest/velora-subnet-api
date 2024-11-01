@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import TokenPairsDetail
+from .views import PoolEventsDownload, index
 
 urlpatterns = [
-    path('pool-events', TokenPairsDetail.as_view(), name='pool-events-list'),
+    path('pool-events', PoolEventsDownload.as_view(), name='pool-events-download'),
+    path('', index, name='index'),  # Add this line for the index view
 ]
