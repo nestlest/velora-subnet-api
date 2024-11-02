@@ -1,17 +1,14 @@
 {
-    "builds": [
+  "builds": [{
+      "src": "velora/wsgi.py",
+      "use": "@ardnt/vercel-python-wsgi",
+      "config": { "maxLambdaSize": "15mb" }
+  }],
+  "routes": [
       {
-        "src": "manage.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb" }
-      },
-      {
-        "src": "velora/wsgi.py",
-        "use": "@vercel/python"
+          "src": "/(.*)",
+          "dest": "velora/wsgi.py"
       }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "velora/wsgi.py" }
-    ]
-  }
+  ]
+}
   
