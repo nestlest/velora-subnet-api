@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "velora.wsgi.application"
+WSGI_APPLICATION = "velora.wsgi.app"
 
 
 # Database
