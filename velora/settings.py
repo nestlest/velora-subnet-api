@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-llnnx3#b3i(&8fq@q5xw3_b$m#ya4_@86ddcfam*_=f84ndr(w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 
 # Application definition
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "velora.wsgi.application"
+WSGI_APPLICATION = "velora.wsgi.app"
 
 
 # Database
