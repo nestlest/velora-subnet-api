@@ -33,6 +33,7 @@ class PoolEventsDownload(generics.GenericAPIView):
         end_datetime = request.query_params.get("end_datetime", None)
         start_datetime = normalize_datetime(start_datetime)
         end_datetime = normalize_datetime(end_datetime)
+        print(start_datetime, end_datetime)
         start_block_number, end_block_number = self.blockchainclient.get_block_number_range(start_datetime, end_datetime)
         if not token0 or not token1 or not fee:
             return Response({"error": "Please provide exactly two token pairs"}, status=status.HTTP_400_BAD_REQUEST)
