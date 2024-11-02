@@ -2,7 +2,11 @@
   "builds": [{
       "src": "velora/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": { 
+        "maxLambdaSize": "15mb",
+        "memory": 1024,
+        "timeout": 10
+      }
   }],
   "routes": [
       {
