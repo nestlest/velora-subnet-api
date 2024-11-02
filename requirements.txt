@@ -6,6 +6,6 @@ django-probes
 django-debug-toolbar
 djangorestframework
 django-bootstrap-v5
-psycopg2
+psycopg2-binary
 python-dateutil
 pool-data-fetcher
